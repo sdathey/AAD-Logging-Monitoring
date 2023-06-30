@@ -1,6 +1,6 @@
 # AAD-Logging-Monitoring
 
-![Cloud Honeynet / Azure AD Logging and Monitoring](https://i.imgur.com/pocxK19.jpg)
+![Cloud Honeynet / Azure AD Logging and Monitoring](https://i.imgur.com/wdRxnV7.jpg)
 
 ## Introduction
 
