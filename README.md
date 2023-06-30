@@ -4,7 +4,7 @@
 
 ## Introduction
 
-In a previous project, Rayda Estate, a fictional company, deployed an Azure-based honeynet open to the Internet to attract  hackers. Log sources from various resources are collected in a Log Analytics workspace, enabling Microsoft Sentinel to generate attack maps, alerts, and incidents. Initial security metrics were measured over 24 hours in the insecure environment. Subsequently, security controls were implemented to fortify the environment, and metrics were measured for another 24 hours. One of those logs was Azure Active Directory logs.
+In the previous project, Rayda Estate, a fictional company, deployed an Azure-based honeynet open to the Internet to attract  hackers. Log sources from various instances are collected in a Log Analytics workspace, enabling Microsoft Sentinel to generate attack maps, alerts, and incidents. Initial security metrics were measured over 24 hours in the insecure environment. Subsequently, security controls were implemented to fortify the environment, and metrics were measured for another 24 hours. One of those logs was Azure Active Directory Logs.
 Azure Active Directory Logs capture the complete sign-in activity history and maintain an audit trail of all activities and changes within Azure AD for a specific tenant. These logs encompass sign-in and audit logs, detailing the activities and modifications that occur within the Active Directory. To seamlessly transmit these sign-in and audit logs to the Log Analytics workspace, I will configure the AAD diagnostic setting accordingly.
 
 ## Step-By-Step Configuration Of Azure AD Logging
@@ -13,11 +13,11 @@ Azure Active Directory Logs capture the complete sign-in activity history and ma
 
 1 From the Azure home page, search for Azure Active Directory in the search bar
 
-2 Click to open the  Azure Active Directory which brings you to its page (3).
+2 Click to open the  Azure Active Directory from the drop-down menu.
 
 ![Architecture Diagram](https://i.imgur.com/EyoWCbk.jpg)
 
-3 Is the Azure Active Directory page
+3 From the Azure Active Directory page
 
 4 Click Diagnostic setting and then
 
@@ -25,32 +25,32 @@ Azure Active Directory Logs capture the complete sign-in activity history and ma
 
 ![Architecture Diagram](https://i.imgur.com/B8fuY7a.jpg)
 
-6 Give the Diagnostic setting a name by entering a name. In this case, the name is AAD=Logs
+6 Give the Diagnostic setting a name by entering a name. In this case, the name is "AAD-Logs"
 
 7 Select from Logs categories which log you want to collect
-  EX: AuditLogs, Signinlogs, ManagedIdentitySigninLogs, RiskyUsers, etc...
+  i.e.: AuditLogs, Signinlogs, ManagedIdentitySigninLogs, RiskyUsers, etc...
   
-8 Select the destination for the selected logs. In this case, They are sent to the
+8 Select the destination for the selected logs. In this case, they are sent to the
   Log Analytics workspace
   
-9 Select the appropriate Subscription. In this case RaydaEstateProject
+9 Select the appropriate Subscription. In this case "RaydaEstateProject"
 
-10 Select the appropriate Logs Analytics workspace. In this case, LogAnalyticsREP 
+10 Select the appropriate Logs Analytics workspace. In this case, "LogAnalyticsREP" 
   which resides in the east US 2
   
 11 Click Save to create the Diagnostic setting for Azure Active Directory Tenant
 
-## Test To Ensure The Logs Are Coming Into The Logs Analytics Workspace
+## Test To Ensure The Logs Have Been Ingested Into The Logs Analytics Workspace
 
 ![Architecture Diagram](https://i.imgur.com/DpfQEML.jpg)
 
 1 From the Azure home page, search for Log Analytics workspace in the search bar
 
-2 Click to open Log Analytics workspace which brings you to its page (3).
+2 Click to open Log Analytics workspace from the drop-down menu
 
 ![Architecture Diagram](https://i.imgur.com/sm0qinX.jpg)
 
-3 Is the Log Analytics workspace page
+3 From the Log Analytics workspace page
 
 4 Click Logs to access the query page 
 
@@ -59,7 +59,7 @@ Azure Active Directory Logs capture the complete sign-in activity history and ma
 
 6 Click Run to run the AudiLogs query 
 
-7 The results of the query are populated in the Logs Analytics workspace 
+7 The results of the query are populated in the Log Analytics workspace 
 
 ![Architecture Diagram](https://i.imgur.com/xTOccA0.jpg)
 
@@ -68,7 +68,7 @@ Azure Active Directory Logs capture the complete sign-in activity history and ma
 
 9 Click Run to run the SigninLogs query
 
-10 The results of the query are populated in the Logs Analytics workspace
+10 The results of the query are populated in the Log Analytics workspace
 
 ## Conclusion
-The configuration was successful The Azure Active Directory logs are being ingested into the Log Analytics workspace. This configuration would allow the monitoring of Azure tenant-level logs through the Log Analytics workspace and Microsoft Sentinel. 
+The configuration was successful, The Azure Active Directory logs are being ingested into the Log Analytics workspace. This configuration would allow the monitoring of Azure tenant-level logs through the Log Analytics workspace and Microsoft Sentinel. 
