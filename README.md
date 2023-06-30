@@ -25,7 +25,7 @@ Azure Active Directory Logs capture the complete sign-in activity history and ma
 
 ![Architecture Diagram](https://i.imgur.com/B8fuY7a.jpg)
 
-6 Give the Diagnostic setting a name by entering a name
+6 Give the Diagnostic setting a name by entering a name. In this case, the name is AAD=Logs
 
 7 Select from Logs categories which log you want to collect
   EX: AuditLogs, Signinlogs, ManagedIdentitySigninLogs, RiskyUsers, etc...
