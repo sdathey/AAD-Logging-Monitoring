@@ -1,4 +1,5 @@
 # AAD-Logging-Monitoring
+
 ![Cloud Honeynet / Azure AD Logging and Monitoring](https://i.imgur.com/nELO2qX.jpg)
 
 ## Introduction
@@ -6,10 +7,8 @@
 In a previous project, Rayda Estate, a fictional company, deployed an Azure-based honeynet open to the Internet to attract  hackers. Log sources from various resources are collected in a Log Analytics workspace, enabling Microsoft Sentinel to generate attack maps, alerts, and incidents. Initial security metrics were measured over 24 hours in the insecure environment. Subsequently, security controls were implemented to fortify the environment, and metrics were measured for another 24 hours. One of those logs was Azure Active Directory logs.
 Azure Active Directory Logs capture the complete sign-in activity history and maintain an audit trail of all activities and changes within Azure AD for a specific tenant. These logs encompass sign-in and audit logs, detailing the activities and modifications that occur within the Active Directory. To seamlessly transmit these sign-in and audit logs to the Log Analytics workspace, I will configure the AAD diagnostic setting accordingly.
 
+## Step-By-Step Configuration Of Azure AD Logging
 
-
-
-## Step-by-step configuration of Azure AD logging
 ![Architecture Diagram](https://i.imgur.com/46gTdRp.jpg)
 
 1 From the Azure home page, search for Azure Active Directory in the search bar
@@ -41,7 +40,7 @@ Azure Active Directory Logs capture the complete sign-in activity history and ma
   
 11 Click Save to create the Diagnostic setting for Azure Active Directory Tenant
 
-## Test to ensure the logs are coming into the Logs Analytics workspace
+## Test To Ensure The Logs Are Coming Into The Logs Analytics Workspace
 
 ![Architecture Diagram](https://i.imgur.com/DpfQEML.jpg)
 
