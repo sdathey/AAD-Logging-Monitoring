@@ -71,4 +71,4 @@ Azure Active Directory Logs capture the complete sign-in activity history and ma
 10. The results of the query are populated in the Log Analytics workspace
 
 ## Conclusion
-The configuration was successful, The Azure Active Directory logs are being ingested into the Log Analytics workspace. This configuration would allow the monitoring of Azure tenant-level logs through the Log Analytics workspace and Microsoft Sentinel. 
+The configuration of the Azure Active Directory logs ingestion into the Log Analytics workspace was successful. Now, these logs are being efficiently collected and stored for analysis. This configuration enables the monitoring of Azure tenant-level logs through both the Log Analytics workspace and Microsoft Sentinel. By centralizing the logs in the Log Analytics workspace, organizations gain a comprehensive view of their Azure Active Directory activities and can leverage the powerful capabilities of Microsoft Sentinel for advanced threat detection and response. This integrated setup enhances the security and visibility of the Azure environment, enabling proactive monitoring and efficient incident management.
